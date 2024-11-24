@@ -1,0 +1,124 @@
+body {
+   padding: 0;
+   margin: 0;
+   height: 100vh;
+   width: 100%;
+}
+.primaryContainer {
+   display: grid;
+   height: 100vh;
+   width: 100%;
+   background: url(./images/primaryBackground.jpg);
+   background-size: cover;
+}
+.title {
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+}
+.title > h2 {
+   padding: 2rem;
+   margin: 0;
+   font-family: 'Gabarito';
+   text-align: center;
+   font-size: 5rem;
+   color: rgb(248, 248, 248);
+   text-shadow: 1px 1px 8px rgb(199, 199, 255);
+   letter-spacing: 2px;
+   user-select: none;
+}
+.title > svg {
+   cursor: pointer;
+   animation: 1s linear infinite play;
+   fill: white;
+   height: 4rem;
+   margin-left: 1rem;
+   margin-top: 3.5rem;
+}
+@keyframes play{
+  0% {
+   transform: scale(1);
+  } 
+  50% {
+   transform: scale(1.1);
+  }
+  100% {
+   transform: scale(1);
+  }
+}
+.footer {
+   position: absolute;
+   top: 0.3rem;
+   left: 1rem;
+}
+.footer h2 {
+   margin-bottom: 0;
+   font-family: 'Roboto';
+   text-align: center;
+   font-size: 1rem;
+   color: rgb(255, 255, 255);
+   text-shadow: 2px 2px rgb(0, 0, 0);
+}
+.startPlayDialog {
+  background: none;
+  background-size: cover;
+  height: 20rem;
+  border: none;
+}
+.startPlayDialog label{
+   font-family: 'Gabarito';
+   color: white;
+   font-size: 2rem;
+   display: block;
+   text-align: center;
+   text-shadow: 1px 1px 2px rgb(212, 212, 255);
+ }
+ .startPlayDialog input{
+   font-family: 'Gabarito';
+   box-sizing: border-box;
+   padding-left: 10px;
+   padding-bottom: 20px;
+   padding-top: 20px;
+   font-size: 2rem;
+   margin-top: 0.3rem;
+   display: block;
+   text-align: start;
+   border: 4px solid rgb(212, 212, 255);
+   border-radius: 10px;
+   height: 20px;
+   width: 320px;
+   outline: none;
+ }
+ .startPlayDialog input::placeholder {
+   font-size: 1.8rem;
+ }
+ .startPlayDialog input:hover {
+   background-color: rgb(248, 248, 248);
+ }
+ .startPlayDialog input:focus {
+   background-color: rgb(248, 248, 248);
+   box-shadow: inset 2px 2px 2px rgb(105, 105, 105);
+ }
+
+
+
+ .startPlayDialog button{
+   background-color: white;
+   display: block;
+   position: relative;
+   top: 20px;
+   margin: 0 auto;
+   font-family: 'Gabarito';
+   font-size: 2rem;
+   border-radius: 10px;
+   border: 4px solid rgb(212, 212, 255);
+   width: 200px;
+   padding: 5px;
+   animation: 1s infinite linear play;
+   cursor: pointer;
+   text-shadow: 3px 3px 2px rgb(212, 212, 255);;
+ }
+ .startPlayDialog button:hover {
+   background-color: rgb(243, 243, 243);
+ }
