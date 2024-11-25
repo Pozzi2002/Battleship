@@ -57,13 +57,27 @@
 }
 
 .firstPlayerGrid2 {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    border: 1px solid black;
+    height: 28rem;
+    width: 28rem;
+}
+.firstPlayerGrid2 * {
+    border: 1px solid black;
+}
+
+
+.secondPlayerGrid2 {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     border: 1px solid black;
     height: 28rem;
     width: 28rem;
 }
 
-.secondPlayerGrid2 {
+.secondPlayerGrid2 * {
     border: 1px solid black;
-    height: 28rem;
-    width: 28rem;
 }

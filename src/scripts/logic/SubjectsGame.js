@@ -36,7 +36,7 @@ class Gameboard {
 
     place(ship, x, y, direction) {
       this.ships.push([ship, [x], [y], direction])
-      for (i = 0; i < ship.length; i++) {
+      for (let i = 0; i < ship.length; i++) {
         if (direction === 'x') {
           this.gameboard[y][x] = 1;
           x++;
@@ -55,6 +55,7 @@ class Gameboard {
             ship[1].indexOf(x) !== -1 && 
             ship[2].indexOf(y) !== -1
         ) {
+            this.gameboard[y][x] = 'X'
             ship[0].hit();
         } else {
               this.gameboard[y][x] = 2;
@@ -69,9 +70,11 @@ class Gameboard {
     };
 };
 
-class Player {
+class Player extends Gameboard{
     constructor(type) {
+        super()
         this.type = type;
-        this.gameboard = new Gameboard();
     };
 };
+
+export {Player, Ship}
