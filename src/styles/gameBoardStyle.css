@@ -35,6 +35,8 @@
 
 .primary2 {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     height: 80vh;
     width: 100%;
  }
@@ -52,4 +54,16 @@
 .resume2:active {
     transform: scale(1);
     cursor: pointer;
-  }
+}
+
+.firstPlayerGrid2 {
+    border: 1px solid black;
+    height: 28rem;
+    width: 28rem;
+}
+
+.secondPlayerGrid2 {
+    border: 1px solid black;
+    height: 28rem;
+    width: 28rem;
+}

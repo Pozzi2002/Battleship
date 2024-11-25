@@ -1,6 +1,6 @@
 import Cloud from './../../styles/imagesSvg/cloud.svg'
 import Resume from './../../styles/imagesSvg/resume.svg'
-import './gameBoardGrid.js'
+import {createGrid} from './gameBoardGrid.js'
 
 function gameBoardDomFunction() {
 const body = document.querySelector('body');
@@ -43,6 +43,9 @@ resume.addEventListener('click', () => {
   }
 });
  
+
+//CreateGrid function from file gameBoardGrid.js
+createGrid()
 };
 
 export { gameBoardDomFunction }
