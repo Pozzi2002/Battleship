@@ -89,4 +89,4 @@ player1.receiveAttack(1, 2)
 player1.receiveAttack(1, 3)
 player1.receiveAttack(1, 1)
 
-export {Player, Ship}
+export {Player, Ship, player1, player2}
