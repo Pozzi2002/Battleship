@@ -8,6 +8,8 @@ const startPlayButton = document.querySelector('.startPlayButton')
 const primaryContainer = document.querySelector('.primaryContainer')
 
 startPlayButton.addEventListener('click', () => {
+    const playerName = document.querySelector('#inputPlayer').value;
+    
     primaryContainer.parentNode.removeChild(primaryContainer);
-    gameBoardDomFunction();
+    gameBoardDomFunction(playerName);
 })

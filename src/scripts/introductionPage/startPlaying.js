@@ -6,4 +6,3 @@ const primaryContainer = document.querySelector('.primaryContainer')
 play.addEventListener('click', () => {
     startPlay.showModal()
 })
-

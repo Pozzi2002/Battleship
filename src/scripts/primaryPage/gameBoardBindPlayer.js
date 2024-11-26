@@ -1,4 +1,4 @@
-import { player1, Ship } from "./../logic/SubjectsGame.js"
+import { player1 } from "./../logic/SubjectsGame.js"
 function bindPlayer() {
 const firstPlayerGrid = document.querySelector('.firstPlayerGrid2').children;
 let total = []
@@ -6,8 +6,12 @@ let total = []
 player1.gameboard.forEach(arr => arr.forEach(item => total.push(item)));
   
 Array.from(firstPlayerGrid).forEach(grid => {
-  grid.textContent = total[0];
-  total.shift()
+  if (total[0] === 'X') {
+    grid.className = 'hit';
+  } else if (total[0] === 2) {
+    grid.className = 'miss';
+  }
+  total.shift();
  });
 };
 
