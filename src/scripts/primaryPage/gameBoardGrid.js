@@ -1,7 +1,6 @@
 import { bindPlayer } from './gameBoardBindPlayer.js'
 import { bindEnemy } from './gameBoardBindEnemy.js';
-import { attackEnemyDom } from './gameBoardAttackEnemy.js'
-import { logicEnemyAttack } from '../logic/logicEnemy.js';
+import { subsequence } from './subsequence/subsequenceFunction.js';
 function createGrid() {
 const primary = document.querySelector('.primary2');
 const firstPlayerGrid = document.createElement('div');
@@ -16,10 +15,7 @@ primary.appendChild(secondPlayerGrid);
 appendsGrid(firstPlayerGrid);
 appendsGrid(secondPlayerGrid);
 
-bindPlayer();
-bindEnemy();
-attackEnemyDom();
-logicEnemyAttack();
+subsequence();
 };
 
 function appendsGrid(playerGrid) {

@@ -86,7 +86,6 @@ let ship1 = new Ship(3)
 let ship2 = new Ship(3)
 player1.place(ship1, 1, 1, 'y');
 player2.place(ship2, 1, 1, 'y')
-//player1.receiveAttack(2, 2)
 
 
 export {Player, Ship, player1, player2}
