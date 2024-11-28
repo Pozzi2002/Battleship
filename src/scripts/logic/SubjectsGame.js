@@ -67,7 +67,7 @@ class Gameboard {
 
   reportEnd() {
       if (this.ships.every(item => item[0].sunk === true)) {
-          return 'end'
+          return true
       }
   };
 };
@@ -82,10 +82,10 @@ class Player extends Gameboard{
 
 let player1 = new Player('Player');
 let player2 = new Player('Computer');
-let ship1 = new Ship(3)
-let ship2 = new Ship(3)
+let ship1 = new Ship(3);
+let ship2 = new Ship(3);
 player1.place(ship1, 1, 1, 'y');
-player2.place(ship2, 1, 1, 'y')
+player2.place(ship2, 1, 1, 'y');
 
 
 export {Player, Ship, player1, player2}

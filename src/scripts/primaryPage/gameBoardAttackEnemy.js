@@ -1,6 +1,7 @@
 import { player2 } from "./../logic/SubjectsGame.js"
 import { bindEnemy } from "./gameBoardBindEnemy.js";
 import { logicEnemyAttack } from "../logic/logicEnemy.js";
+import { endPlay } from "./endPlay/endPlay.js";
 function attackEnemyDom() {
   const secondPlayerGrid2 = document.querySelector('.secondPlayerGrid2').children;
 
@@ -11,9 +12,9 @@ function attackEnemyDom() {
       player2.receiveAttack(x, y);
       setTimeout(bindEnemy, 100);
       setTimeout(logicEnemyAttack, 400);
+      endPlay();
     })
   });
-  
 };
 
 export { attackEnemyDom }
