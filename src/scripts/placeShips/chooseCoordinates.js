@@ -83,4 +83,4 @@ function placeShips(coor1, coor2, coor3, coor4, coor41, coor5) {
  })
 }
 
-export { sendShips };
+export { sendShips, placeShips };

@@ -1,4 +1,5 @@
 import { player1 } from "./../logic/SubjectsGame.js"
+import { placeShips } from "../placeShips/chooseCoordinates.js";
 function bindPlayer() {
 const firstPlayerGrid = document.querySelector('.firstPlayerGrid2').children;
 let total = []
@@ -13,6 +14,7 @@ Array.from(firstPlayerGrid).forEach(grid => {
   }
   total.shift();
  });
+ console.log(player1.gameboard)
 };
 
 

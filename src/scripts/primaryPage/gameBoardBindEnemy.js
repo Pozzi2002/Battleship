@@ -13,7 +13,6 @@ Array.from(secondPlayerGrid2).forEach(grid => {
     }
   total.shift()
  });
- console.log(player2)
 };
 
 

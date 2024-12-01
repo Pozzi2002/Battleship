@@ -1,6 +1,8 @@
 import { bindPlayer } from './gameBoardBindPlayer.js'
 import { bindEnemy } from './gameBoardBindEnemy.js';
 import { attackEnemyDom } from './gameBoardAttackEnemy.js';
+import { player1 } from '../logic/SubjectsGame.js';
+import { placeShips } from '../placeShips/chooseCoordinates.js';
 function createGrid() {
 const primary = document.querySelector('.primary2');
 const firstPlayerGrid = document.createElement('div');
@@ -16,6 +18,7 @@ appendsGrid(firstPlayerGrid);
 appendsGrid(secondPlayerGrid);
 
 attackEnemyDom();
+placeShips(player1.ships[0][1], player1.ships[1][1], player1.ships[2][1][0], player1.ships[3][1][0], player1.ships[3][2][0], player1.ships[4][2][0])
 };
 
 function appendsGrid(playerGrid) {
