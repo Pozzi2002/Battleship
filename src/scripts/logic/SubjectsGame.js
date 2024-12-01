@@ -52,17 +52,24 @@ class Gameboard {
   };
 
   receiveAttack(x, y) {
+    let total = [];
     this.ships.forEach(ship => {
+      this.gameboard[y][x] = 2;
       if (
           ship[1].indexOf(x) !== -1 && 
           ship[2].indexOf(y) !== -1
       ) {
-          this.gameboard[y][x] = 'X'
+          console.log('test1')
+          total.push(y)
+          total.push(x)
+          this.gameboard[y][x] = 2
           ship[0].hit();
-      } else {
-            this.gameboard[y][x] = 2;
-      }
-    });
+       }
+     });
+       if (total.length > 0) {
+         this.gameboard[total[0]][total[1]] = 'X';
+         total = [];
+    }
   };
 
   reportEnd() {
@@ -82,10 +89,6 @@ class Player extends Gameboard{
 
 let player1 = new Player('Player');
 let player2 = new Player('Computer');
-let ship1 = new Ship(3);
-let ship2 = new Ship(3);
-player1.place(ship1, 1, 1, 'y');
-player2.place(ship2, 1, 1, 'y');
 
 
 export {Player, Ship, player1, player2}

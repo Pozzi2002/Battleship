@@ -5,7 +5,6 @@ let xData;
 let yData;
 let hit = [];
 
-
 function logicEnemyAttack(n = 0) {
   let [x, y] = randomNumber();
   if (x < 0 || x > 8) x = 1;

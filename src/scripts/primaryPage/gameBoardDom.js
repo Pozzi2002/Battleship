@@ -1,6 +1,6 @@
 import Cloud from './../../styles/imagesSvg/cloud.svg'
 import Resume from './../../styles/imagesSvg/resume.svg'
-import {createGrid} from './gameBoardGrid.js'
+import { createGrid } from './gameBoardGrid.js'
 
 function gameBoardDomFunction(playerName) {
 if (playerName === '') playerName = 'Player'
